@@ -19,7 +19,7 @@ class AppTheme{
     ),
     textTheme: TextTheme(
       // Titulos muy grandes
-      headlineLarge: GoogleFonts.alef(
+      headlineLarge: GoogleFonts.montserrat(
         color: primaryColor,
         fontSize: 26.5,
         fontWeight: FontWeight.w500,

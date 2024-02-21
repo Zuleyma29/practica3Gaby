@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica3ver2/screens/inputs_screen.dart';
 import 'package:practica3ver2/theme/app_theme.dart';
 
 
@@ -24,6 +25,12 @@ class HomeScreen extends StatelessWidget {
             ),
             leading: const Icon(Icons.input),
             trailing: const Icon(Icons.arrow_circle_right_rounded),
+            onTap: () {
+              final ruta1 = MaterialPageRoute(builder: (context){
+                return const InputsScreen();
+              });
+              Navigator.push(context, ruta1);
+            },
           ),
           const Divider(),
            ListTile(
