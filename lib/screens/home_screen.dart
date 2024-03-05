@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica3ver2/screens/images_screen.dart';
 import 'package:practica3ver2/screens/infinite_scroll_screen.dart';
 import 'package:practica3ver2/screens/inputs_screen.dart';
 import 'package:practica3ver2/screens/notifications_screen.dart';
@@ -64,7 +65,7 @@ class HomeScreen extends StatelessWidget {
             },
           ),
           const Divider(),
-           ListTile(
+          ListTile(
             title: Text('Notificaciones',
             style: AppTheme.lightTheme.textTheme.headlineLarge,
             ),
@@ -82,6 +83,29 @@ class HomeScreen extends StatelessWidget {
             onTap: () {
               final ruta3 = MaterialPageRoute(builder: (context){
                 return const NotificationsScreen();
+              });
+              Navigator.push(context, ruta3);
+            },
+          ),
+          const Divider(),
+           ListTile(
+            title: Text('Imagenes',
+            style: AppTheme.lightTheme.textTheme.headlineLarge,
+            ),
+            subtitle:  Text('Mostrar unas fotos bonitas',
+            style: AppTheme.lightTheme.textTheme.bodySmall,
+            ),
+            leading: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child: const Icon(Icons.image_aspect_ratio_outlined),
+            ),
+            trailing: IconTheme(
+              data: AppTheme.lightTheme.iconTheme,
+              child:const Icon(Icons.arrow_circle_right_rounded),
+            ),
+            onTap: () {
+              final ruta3 = MaterialPageRoute(builder: (context){
+                return const ImagesScreen();
               });
               Navigator.push(context, ruta3);
             },

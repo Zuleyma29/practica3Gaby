@@ -26,7 +26,8 @@ class _InputsScreenState extends State<InputsScreen> {
               entradaNombre(),
               entradaSwitch(),
               entradaSlider(),
-              const ElevatedButton(onPressed: null,
+              const ElevatedButton(
+                  onPressed: null,
                    child: Text(
                     'Gurdar',
                    )),
@@ -59,7 +60,6 @@ class _InputsScreenState extends State<InputsScreen> {
             )
           );
   }
-
   Row entradaSwitch(){
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -77,7 +77,6 @@ class _InputsScreenState extends State<InputsScreen> {
       ],
     );
   }
-
   Column entradaSlider(){
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -97,13 +96,11 @@ class _InputsScreenState extends State<InputsScreen> {
         onChanged: (value){
           setState(() {
             sliderValue = value;
-            print("Se cambio el slider: $sliderValue");
+            // ignore: avoid_print 
+            print('Se cambio el slider: $sliderValue');
           });
         })
       ],
     );
-
   }
-
-
 }
