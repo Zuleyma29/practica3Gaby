@@ -12,6 +12,9 @@ class _InputsScreenState extends State<InputsScreen> {
   bool switchValue = false; // controlar el widget switch
   double sliderValue = 0.0;
   int radioSelected = 0;
+  bool isChecked1=false;
+  bool isChecked2=false;
+  bool isChecked3=false;
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +31,11 @@ class _InputsScreenState extends State<InputsScreen> {
               entradaSwitch(),
               entradaSlider(),
               entradaRadio(),
+              Text(
+                '¿Qué usas para correr tus Apps?',
+                style: AppTheme.lightTheme.textTheme.headlineLarge,
+              ),
+              entradasCheck(),
               const ElevatedButton(
                   onPressed: null,
                    child: Text(
@@ -156,5 +164,56 @@ class _InputsScreenState extends State<InputsScreen> {
       ],
     );
   }
-
+  Row entradasCheck(){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Text(
+          'Navegador',
+          style: AppTheme.lightTheme.textTheme.bodySmall,
+        ),
+        Transform.scale(
+          scale: 1.5,
+          child: Checkbox(
+            value:isChecked1,
+            onChanged:(value){
+              setState(() {
+                isChecked1=value!;
+              });
+            },
+          ),
+        ),
+        Text(
+          'Emulador',
+          style: AppTheme.lightTheme.textTheme.bodySmall,
+        ),
+        Transform.scale(
+          scale: 1.5,
+          child: Checkbox(
+            value:isChecked2,
+            onChanged:(value){
+              setState(() {
+                isChecked2=value!;
+              });
+            },
+          ),
+        ),
+        Text(
+          'Smartphone',
+          style: AppTheme.lightTheme.textTheme.bodySmall,
+        ),
+        Transform.scale(
+          scale: 1.5,
+          child: Checkbox(
+            value:isChecked3,
+            onChanged:(value){
+              setState(() {
+                isChecked3=value!;
+              });
+            },
+          ),
+        ),
+      ],
+    );
+  }
 }
