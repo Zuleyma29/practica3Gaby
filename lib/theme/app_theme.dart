@@ -8,7 +8,7 @@ class AppTheme{
   // Constante de color secundario
   static const secondaryColor=Colors.black;
   //Constante de color de fondo
-  static const backColor = Color.fromARGB(238, 237, 239, 240);
+  static const backColor = Color.fromARGB(236, 247, 249, 249);
   static const backColor2 = Color.fromARGB(237, 78, 79, 80);
   
   

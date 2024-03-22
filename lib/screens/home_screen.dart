@@ -5,6 +5,8 @@ import 'package:practica3ver2/screens/inputs_screen.dart';
 import 'package:practica3ver2/screens/notifications_screen.dart';
 import 'package:practica3ver2/theme/app_theme.dart';
 
+import 'data_screen.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -92,12 +94,12 @@ class HomeScreen extends StatelessWidget {
             title: Text('Imagenes',
             style: AppTheme.lightTheme.textTheme.headlineLarge,
             ),
-            subtitle:  Text('Mostrar unas fotos bonitas',
+            subtitle:  Text('Mostrar  fotos bonitas',
             style: AppTheme.lightTheme.textTheme.bodySmall,
             ),
             leading: IconTheme(
               data: AppTheme.lightTheme.iconTheme,
-              child: const Icon(Icons.image_aspect_ratio_outlined),
+              child: const Icon(Icons.image),
             ),
             trailing: IconTheme(
               data: AppTheme.lightTheme.iconTheme,
@@ -110,6 +112,7 @@ class HomeScreen extends StatelessWidget {
               Navigator.push(context, ruta3);
             },
           ),
+          const Divider(),
         ],
      ),
     );
